@@ -9,8 +9,6 @@ Create a platform where individuals that are interested in traveling can share t
 - Currency converter tool
 - Home page with current news updates
 
-
-
 ## Installation
 - Clone | Download
 
