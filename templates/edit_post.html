@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block stylesheet %}
+<link href="{{ url_for('static', filename='post-submission.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div id="post-create-body">
+   <h1 class="mt-5">Create post</h1>
+   <form action="/edit/{{post.post_id}}" method="post" class="form-container" enctype="multipart/form-data">
+      <div>
+         <label for="title-post" class="form-label">Post Title</label>
+         <input class="form-control w-100" type="text" id="title-post" name="title-post" value="{{post.post_title}}" required>
+      </div>
+      <div >
+         <label for="caption" class="form-label">Caption</label>
+         <textarea class="form-control w-100" id="caption" name="caption" rows="3" required>{{post.caption}}</textarea>
+      </div>
+      <input class="mb-5 btn btn-light w-100" type="submit" value="Update">
+   </form>
+</div>
+{% endblock %} 
